@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "builds": [
+    {
+      "src": "zenvora-portfolio/package.json",
+      "use": "@vercel/next"
+    }
+  ]
+}
