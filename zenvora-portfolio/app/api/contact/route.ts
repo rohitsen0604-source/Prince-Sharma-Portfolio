@@ -59,3 +59,13 @@ export async function POST(req: Request) {
     );
   }
 }
+
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_SERVER?.trim(),
+  port: Number(process.env.SMTP_PORT),
+  secure: false,
+  auth: {
+    user: process.env.SMTP_EMAIL?.trim(),
+    pass: process.env.SMTP_PASSWORD?.trim(),
+  },
+});
