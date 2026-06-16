@@ -9,16 +9,32 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Work", href: "/work" },
   { label: "Growth", href: "/growth" },
   { label: "Contact", href: "/contact" },
 ];
 
 const services = [
-  "Web Development",
-  "Mobile Development",
-  "Recruitment",
-  "Digital Marketing",
-  "AI Solutions",
+  {
+    label: "Web Development",
+    href: "/services/website-development",
+  },
+  {
+    label: "Mobile Development",
+    href: "/services/mobile-app-development",
+  },
+  {
+    label: "Recruitment",
+    href: "/services/recruitment",
+  },
+  {
+    label: "Digital Marketing",
+    href: "/services/digital-marketing",
+  },
+  {
+    label: "AI Solutions",
+    href: "/services/ai-solutions",
+  },
 ];
 
 export function Footer() {
@@ -76,11 +92,18 @@ export function Footer() {
               Services
             </h4>
 
-            <ul className="space-y-3 text-muted-foreground">
+            <ul className="space-y-3">
 
               {services.map((service) => (
-                <li key={service}>
-                  {service}
+                <li key={service.href}>
+
+                  <Link
+                    href={service.href}
+                    className="text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {service.label}
+                  </Link>
+
                 </li>
               ))}
 
