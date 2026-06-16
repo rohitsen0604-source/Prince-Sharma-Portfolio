@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Globe,
@@ -17,36 +18,42 @@ const services = [
     description:
       "Modern, responsive websites designed to strengthen your digital presence.",
     icon: Globe,
+    href: "/services/website-development",
   },
   {
     title: "E-Commerce Development",
     description:
       "Scalable online stores that deliver seamless shopping experiences.",
     icon: ShoppingCart,
+    href: "/services/e-commerce-development",
   },
   {
     title: "Custom Software Solutions",
     description:
       "Tailored software built to address unique business requirements.",
     icon: Code2,
+    href: "/services/custom-software-solutions",
   },
   {
     title: "Mobile App Development",
     description:
       "High-performing applications for Android and iOS platforms.",
     icon: Smartphone,
+    href: "/services/mobile-app-development",
   },
   {
     title: "UI/UX Design",
     description:
       "User-centric experiences that combine aesthetics with usability.",
     icon: PenTool,
+    href: "/services/ui-ux-design",
   },
   {
     title: "AI Solutions",
     description:
       "Intelligent systems that enhance efficiency and decision-making.",
     icon: Brain,
+    href: "/services/ai-solutions",
   },
 ];
 
@@ -89,23 +96,30 @@ export function TechnologyServices() {
                 }}
                 className="group rounded-3xl border bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
+                {/* Icon */}
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10">
                   <Icon className="h-7 w-7 text-emerald-600 dark:text-emerald-400" />
                 </div>
 
+                {/* Title */}
                 <h3 className="text-2xl font-semibold">
                   {service.title}
                 </h3>
 
+                {/* Description */}
                 <p className="mt-4 leading-7 text-muted-foreground">
                   {service.description}
                 </p>
 
-                <div className="mt-8 flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                {/* Learn More */}
+                <Link
+                  href={service.href}
+                  className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-emerald-600 transition-colors hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300"
+                >
                   Learn More
 
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </div>
+                </Link>
 
               </motion.div>
             );

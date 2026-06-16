@@ -11,7 +11,7 @@ export default function Loading() {
       <div className="text-center">
 
         <h2 className="text-2xl font-bold">
-          ZENVORA
+          Prince Sharma
         </h2>
 
         <p className="mt-2 text-muted-foreground">

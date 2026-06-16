@@ -12,6 +12,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Work", href: "/work" }, // 👈 Add this
   { label: "Growth", href: "/growth" },
   { label: "Contact", href: "/contact" },
 ];
@@ -27,7 +28,7 @@ export function Navbar() {
           href="/"
           className="text-2xl font-bold tracking-tight"
         >
-          ZENVORA
+          Prince Sharma
         </Link>
 
         {/* Desktop Navigation */}

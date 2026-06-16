@@ -1,21 +1,19 @@
-import { AboutHero } from "@/components/about/about-hero";
-import { CompanyOverview } from "@/components/about/company-overview";
-import { Challenges } from "@/components/about/challenges";
-import { Solutions } from "@/components/about/solutions";
-import { Leadership } from "@/components/about/leadership";
-import { VisionMission } from "@/components/about/vision-mission";
-import { AboutCTA } from "@/components/about/about-cta";
+import { Hero } from "@/components/home/hero";
+import { AboutPreview } from "@/components/home/about-preview";
+import { WhyChooseUs } from "@/components/home/why-choose-us";
+import { Solutions } from "@/components/home/solutions";
+import { ServicesPreview } from "@/components/home/services-preview";
+import { WorkPreview } from "@/components/home/work-preview";
 
-export default function AboutPage() {
+export default function Home() {
   return (
     <>
-      <AboutHero />
-      <CompanyOverview />
-      <Challenges />
+      <Hero />
+      <AboutPreview />
+      <WhyChooseUs />
       <Solutions />
-      <Leadership />
-      <VisionMission />
-      <AboutCTA />
+      <ServicesPreview />
+      <WorkPreview />
     </>
   );
 }

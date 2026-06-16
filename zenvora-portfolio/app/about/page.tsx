@@ -7,7 +7,7 @@ import { Solutions } from "@/components/about/solutions";
 import { Leadership } from "@/components/about/leadership";
 import { VisionMission } from "@/components/about/vision-mission";
 import { AboutCTA } from "@/components/about/about-cta";
-
+import { WorkPreview } from "@/components/home/work-preview";
 export const metadata: Metadata = {
   title: "About Us",
   description:
@@ -23,6 +23,7 @@ export default function AboutPage() {
       <Solutions />
       <Leadership />
       <VisionMission />
+       <WorkPreview />
       <AboutCTA />
     </>
   );
